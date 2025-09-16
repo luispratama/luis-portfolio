@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luis Pratama — E-Portfolio</title>
 
-  <!-- Tailwind CDN (no build, free) -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -57,7 +57,7 @@
         <div class="relative">
           <div class="absolute -inset-1 rounded-full bg-gradient-to-br from-accent-500/30 via-transparent to-fuchsia-500/30 blur"></div>
           <div class="p-[3px] rounded-full bg-gradient-to-r from-accent-500 to-fuchsia-500">
-            <img src="/assets/luis.jpeg" alt="Luis Pratama"
+            <img src="/assets/luis.JPEG" alt="Luis Pratama"
                  class="rounded-full w-64 h-64 object-cover border border-white/10 shadow-glow transition duration-500 hover:scale-105" />
           </div>
         </div>
@@ -82,16 +82,16 @@
     </div>
   </section>
 
-  <!-- Contributions & Events (your photos) -->
+  <!-- Contributions -->
   <section id="contributions" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-xl md:text-2xl font-semibold text-white">Contributions & Events</h2>
     <div class="mt-6 grid md:grid-cols-2 gap-6">
       <div class="rounded-2xl border border-white/10 p-4 bg-white/5">
-        <img src="/assets/expo.jpg" alt="Electronex Expo participation" class="rounded-xl object-cover w-full h-64" />
+        <img src="/assets/expo.JPG" alt="Electronex Expo participation" class="rounded-xl object-cover w-full h-64" />
         <p class="mt-3 text-sm text-zinc-300">Joined the Electronex Expo with peers to explore the latest electronics design & assembly technologies.</p>
       </div>
       <div class="rounded-2xl border border-white/10 p-4 bg-white/5">
-        <img src="/assets/techfest.jpeg" alt="UTS TechFest SortBot showcase" class="rounded-xl object-cover w-full h-64" />
+        <img src="/assets/techfest.JPEG" alt="UTS TechFest SortBot showcase" class="rounded-xl object-cover w-full h-64" />
         <p class="mt-3 text-sm text-zinc-300">Showcased the SortBot simulation project at UTS TechFest, demonstrating YOLO-based object detection.</p>
       </div>
     </div>
@@ -102,77 +102,15 @@
     <h2 class="text-xl md:text-2xl font-semibold text-white">Selected Projects</h2>
     <div class="mt-6 grid md:grid-cols-2 gap-6">
       <article class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <img src="/assets/techfest.jpeg" alt="UTS TechFest SortBot showcase" class="rounded-xl w-full h-44 object-cover border border-white/10" />
+        <img src="/assets/techfest.JPEG" alt="UTS TechFest SortBot showcase" class="rounded-xl w-full h-44 object-cover border border-white/10" />
         <h3 class="mt-4 text-white font-medium">SortBot Simulation — uArm + YOLO</h3>
         <p class="mt-2 text-sm text-zinc-400">Top-down detector trained on 1k+ labeled images in PyBullet; achieved high in-sim identification accuracy. Showcased at UTS TechFest.</p>
       </article>
       <article class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <img src="/assets/expo.jpg" alt="Electronex Expo participation" class="rounded-xl w-full h-44 object-cover border border-white/10" />
+        <img src="/assets/expo.JPG" alt="Electronex Expo participation" class="rounded-xl w-full h-44 object-cover border border-white/10" />
         <h3 class="mt-4 text-white font-medium">UR3e Bottle Sorting — Vision Perception</h3>
         <p class="mt-2 text-sm text-zinc-400">ROS 2 node capturing RealSense frames with a live OpenCV tuning UI; stable signals for accurate pick-and-place. Explored related tech at the Electronex Expo.</p>
       </article>
-    </div>
-  </section>
-
-  <!-- Experience (short CV extract; full CV below as PDF) -->
-  <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-xl md:text-2xl font-semibold text-white">Experience</h2>
-    <div class="mt-6 grid gap-6">
-      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <div class="flex items-baseline justify-between gap-4">
-          <h3 class="text-white font-medium">Engineering Intern — Optik Consultancy / Byron Bay Technology</h3>
-          <span class="text-xs text-zinc-400">May–Aug 2024</span>
-        </div>
-        <ul class="mt-3 text-sm text-zinc-300 list-disc list-inside">
-          <li>Designed multidirectional nozzle housing with auto shut-off</li>
-          <li>SolidWorks modeling to tight tolerances and precise fit</li>
-          <li>Integrated servos & Arduino for automation</li>
-          <li>Prototyping, testing, and mech-electrical integration</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Cover Letter (full text) -->
-  <section id="cover-letter" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-xl md:text-2xl font-semibold text-white">Cover Letter</h2>
-    <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-white/5 space-y-3 text-zinc-300">
-      <p>Dear Hiring Manager,</p>
-      <p>I am writing to express my interest in the Graduate Mechatronics Engineer position at Industrus Engineering. As a final year Mechatronics Engineering student at the University of Technology Sydney, I am excited about the opportunity to contribute to your innovative engineering projects and develop professionally through your graduate program.</p>
-      <p>During my internship at Optik Consultancy, I worked on a microalgae bioreactor project that involved designing and prototyping systems for temperature and nutrient control. Our team initially aimed to include several advanced features, but due to time limitations, we had to reassess and deliver a simplified version that still met the core functionality. This experience taught me the importance of adjusting goals while maintaining accountability for quality and outcomes.</p>
-      <p>One challenge involved explaining technical decisions to a client without an engineering background. I had to learn how to simplify complex ideas and communicate clearly to maintain alignment. Another technical hurdle was resolving power distribution issues in our system. I led the transition from Arduino to an ESP32 board, which enabled wireless communication and ensured power stability across all components. For waterproofing, I proposed using a silicone grommet instead of a rigid enclosure, which made the system more flexible and reliable under environmental conditions.</p>
-      <p>Through university projects, I have strengthened my ability to work in diverse teams and apply engineering theory to real problems. In Robotics Studio 2, I developed a vision system that allowed a robotic arm to sort six types of bottles based on their caps. The system used real time computer vision and communicated with motion planning modules to complete a full cycle of detection and actuation. In another project on artificial intelligence, I collaborated on training a YOLO based visual system for a robotic simulation. This work was selected for presentation at the UTS TechFest, recognising our team’s commitment and innovation.</p>
-      <p>My journey also includes moments of learning through difficulty. As an international student managing study and part time work, I once failed a core subject due to prioritising other commitments. I took responsibility, re enrolled the following semester, and applied new strategies that helped me achieve a distinction. This experience taught me resilience, time management, and the importance of wellbeing in sustaining performance.</p>
-      <p>Working in fast paced and unfamiliar environments has also developed my adaptability. In my casual work in hospitality and events, I often set up service stations in new venues with limited space and time. These situations demand flexibility, quick thinking, and effective teamwork to ensure everything runs smoothly.</p>
-      <p>I believe that my hands on engineering experience, collaborative mindset, and commitment to continuous improvement make me a strong candidate for the Industrus Engineering Graduate Program. I am excited by the opportunity to rotate through project areas, learn from experienced mentors, and contribute to sustainable infrastructure and innovation.</p>
-      <p>Thank you for considering my application. I have attached my resume and would welcome the chance to discuss how I can support Industrus Engineering’s mission and values.</p>
-      <p>Kind regards,<br/>Luis Pratama</p>
-    </div>
-  </section>
-
-  <!-- Reflection (full text, Ullman note removed) -->
-  <section id="reflection" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-xl md:text-2xl font-semibold text-white">Reflection</h2>
-
-    <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-white/5">
-      <h3 class="text-white font-medium">Sustainability in Engineering</h3>
-      <div class="mt-3 space-y-3 text-sm text-zinc-300 leading-relaxed">
-        <p>During my internship I was involved in designing a nozzle housing system for a client. The design allowed the nozzle to move in multiple directions and shut off automatically using servo motors and an Arduino. The main goal was to make the system more accurate and efficient while reducing the need for manual handling. The solution worked well and the client was satisfied which made me feel proud of the outcome.</p>
-        <p>However after reflecting on it I started to feel a bit conflicted. Our design reduced the need for workers to be involved in the task which meant that fewer people were required in the process. While this helped improve consistency and performance it also raised questions for me about how engineering choices affect the people who work around them.</p>
-        <p>Before this experience I mostly focused on whether a design worked or solved the technical problem. I believed that automation was always a positive step forward. But through this project I realised that solving one problem can sometimes create another especially when it comes to the social side of engineering.</p>
-        <p>It was a reminder that engineering does not happen in a vacuum. According to Engineers Australia's code of ethics engineers should consider sustainability not just from an environmental perspective but also in terms of long-term social impact. I now see that responsible engineering involves thinking about how people are affected by our work.</p>
-        <p>In the future I want to take a more balanced approach. Efficiency is important but so is the wellbeing of the people who interact with what we design. This experience helped me understand that sustainability includes both systems and people and I want to be the kind of engineer who keeps both in mind.</p>
-      </div>
-    </div>
-
-    <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-white/5">
-      <h3 class="text-white font-medium">Global & Intercultural Practice</h3>
-      <div class="mt-3 space-y-3 text-sm text-zinc-300 leading-relaxed">
-        <p>As an international student studying engineering in Australia, I have often found it challenging to blend in with domestic students especially during group assignments. While language has never been a barrier for me since I have been learning English from a young age, I noticed that some students are hesitant to work with someone from a different background. This made me feel a bit isolated and unsure of how to approach teamwork in the early stages of my degree.</p>
-        <p>I used to believe that as long as I communicated clearly and contributed well it would be easy to integrate into any group. But I have come to understand that group dynamics are also influenced by comfort zones and cultural differences. One time I was part of a group where everyone was welcoming and treated me with the same level of trust and involvement. That experience stood out to me because we not only completed our project successfully, but we also achieved a high distinction. I felt more confident and encouraged because I was given the chance to contribute equally.</p>
-        <p>This made me reflect on the importance of cultural awareness and inclusion in professional collaboration. It also helped me realise how my own actions can support others in feeling comfortable and valued in a team. In the context of engineering which is becoming more globally connected these soft skills are just as important as technical ones.</p>
-        <p>From this experience I learned how valuable it is to be self-aware and inclusive. In future projects I will take more initiative to create a respectful space where every team member feels heard. This reflection has made me more conscious of how I can contribute to a supportive and culturally respectful working environment.</p>
-      </div>
     </div>
   </section>
 
