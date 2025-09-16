@@ -4,7 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luis Pratama — Portfolio</title>
-  <!-- Tailwind CDN (keeps it free + no build) -->
+
+  <!-- Tailwind CDN (no build, free) -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -12,24 +13,22 @@
         extend: {
           colors: {
             base: { bg: '#0a0b10' },
-            accent: {
-              500: '#1090ff',
-            }
+            accent: { 500: '#1090ff' }
           },
           boxShadow: {
             glow: '0 0 40px rgba(16,144,255,.25)'
           },
           backgroundImage: {
-            'radial': 'radial-gradient(1200px 600px at 50% -10%, rgba(16,144,255,.14), transparent 60%)',
-            'grid': "linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)",
+            radial: 'radial-gradient(1200px 600px at 50% -10%, rgba(16,144,255,.14), transparent 60%)',
+            grid: "linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px)"
           }
         }
       }
     }
   </script>
   <style>
-    .noise { position: fixed; inset: 0; pointer-events: none; opacity: .06; mix-blend-mode: soft-light; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.7"/></svg>'); }
-    @keyframes fadeInUp { from { opacity:.0; transform: translateY(8px)} to { opacity:1; transform: translateY(0)} }
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.06;mix-blend-mode:soft-light;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.7"/></svg>');}
+    @keyframes fadeInUp{from{opacity:.0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
   </style>
 </head>
 <body class="min-h-screen bg-base-bg text-zinc-200 antialiased relative">
@@ -47,6 +46,7 @@
         <a href="#facts" class="hover:text-white">Key Facts</a>
         <a href="#projects" class="hover:text-white">Projects</a>
         <a href="#experience" class="hover:text-white">Experience</a>
+        <a href="#contributions" class="hover:text-white">Contributions</a>
         <a href="#cover-letter" class="hover:text-white">Cover Letter</a>
         <a href="#reflection" class="hover:text-white">Reflection</a>
         <a href="#resume" class="hover:text-white">Resume</a>
@@ -64,7 +64,7 @@
         <div class="relative animate-[fadeInUp_.6s_ease-out_.05s_both]">
           <div class="absolute -inset-1 rounded-full bg-gradient-to-br from-accent-500/30 via-transparent to-fuchsia-500/30 blur"></div>
           <div class="p-[3px] rounded-full bg-gradient-to-r from-accent-500 to-fuchsia-500">
-            <img src="/assets/luis.jpg" alt="Luis Pratama" class="rounded-full w-64 h-64 object-cover border border-white/10 shadow-glow"/>
+            <img src="/assets/luis.jpg" alt="Luis Pratama" class="rounded-full w-64 h-64 object-cover border border-white/10 shadow-glow transition duration-500 hover:scale-105" />
           </div>
         </div>
       </div>
@@ -77,8 +77,8 @@
           Mechatronics @ UTS · Sydney
         </div>
         <h1 class="mt-4 text-3xl md:text-5xl font-semibold tracking-tight text-white animate-[fadeInUp_.6s_ease-out_.05s_both]">Luis Pratama</h1>
-        <p class="mt-3 text-lg text-zinc-400 animate-[fadeInUp_.6s_ease-out_.08s_both]">Final‑year Mechatronics Engineering (Honours) · aspiring Project Engineer</p>
-        <p class="mt-6 text-zinc-300 leading-relaxed max-w-2xl animate-[fadeInUp_.6s_ease-out_.11s_both]">I build simple, robust systems that make everyday processes smarter—from camera‑guided robots to practical mechanical designs. Dark, minimal interfaces; code that reads like a blueprint.</p>
+        <p class="mt-3 text-lg text-zinc-400 animate-[fadeInUp_.6s_ease-out_.08s_both]">Final-year Mechatronics Engineering (Honours) · aspiring Project Engineer</p>
+        <p class="mt-6 text-zinc-300 leading-relaxed max-w-2xl animate-[fadeInUp_.6s_ease-out_.11s_both]">I build simple, robust systems that make everyday processes smarter—from camera-guided robots to practical mechanical designs. Dark, minimal interfaces; code that reads like a blueprint.</p>
         <div class="mt-8 flex flex-wrap gap-3 animate-[fadeInUp_.6s_ease-out_.14s_both]">
           <a href="#projects" class="rounded-xl px-4 py-2 bg-white text-black text-sm font-medium hover:bg-zinc-200 transition">See projects</a>
           <a href="#contact" class="rounded-xl px-4 py-2 ring-1 ring-white/15 text-sm text-white hover:bg-white/5 transition">Get in touch</a>
@@ -87,42 +87,28 @@
     </div>
   </section>
 
-  <!-- About (Landing Page / About Me) -->
+  <!-- About -->
   <section id="about" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-xl md:text-2xl font-semibold text-white">About Me</h2>
     <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent">
-      <p class="text-zinc-300 leading-relaxed">I’m a final‑year Mechatronics Engineering (Honours) student at UTS who enjoys building simple, robust systems that work in the real world. I specialise in mechanical building design using SolidWorks and have hands‑on experience with Arduino, servo motion, and design for manufacturing.</p>
-      <p class="mt-4 text-zinc-300 leading-relaxed">Through my internship at Optik Consultancy / Byron Bay Technology, I designed a multidirectional nozzle housing with auto shut‑off and integrated servos and Arduino for automation. This work sharpened my attention to tolerances, fit, and practical prototyping.</p>
+      <p class="text-zinc-300 leading-relaxed">I’m a final-year Mechatronics Engineering (Honours) student at UTS who enjoys building simple, robust systems that work in the real world. I specialise in mechanical building design using SolidWorks and have hands-on experience with Arduino, servo motion, and design for manufacturing.</p>
+      <p class="mt-4 text-zinc-300 leading-relaxed">Through my internship at Optik Consultancy / Byron Bay Technology, I designed a multidirectional nozzle housing with auto shut-off and integrated servos and Arduino for automation. This work sharpened my attention to tolerances, fit, and practical prototyping.</p>
       <p class="mt-4 text-zinc-300 leading-relaxed">I care about the human side of engineering—how automation impacts people, not just throughput. I aim to balance efficiency with social impact and to design systems that are effective <span class="text-zinc-400">and</span> considerate of users and workflows.</p>
     </div>
   </section>
 
-  <!-- Cover Letter -->
-  <section id="cover-letter" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-xl md:text-2xl font-semibold text-white">Cover Letter</h2>
-    <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-white/5">
-      <p class="text-zinc-300 leading-relaxed">Dear Hiring Manager,</p>
-      <p class="mt-3 text-zinc-300 leading-relaxed">I am writing to express my interest in the Graduate Mechatronics Engineer position. As a final‑year Mechatronics Engineering student at the University of Technology Sydney, I am excited about contributing to innovative engineering projects and developing professionally through a graduate program.</p>
-      <p class="mt-3 text-zinc-300 leading-relaxed">During my internship at Optik Consultancy, I worked on a microalgae bioreactor project and learned to adjust goals under time constraints while keeping quality standards. I also communicated technical decisions to non‑engineering stakeholders, led the transition from Arduino to ESP32 for wireless stability, and proposed a flexible waterproofing approach with silicone grommets.</p>
-      <p class="mt-3 text-zinc-300 leading-relaxed">At university, I developed a vision system for a UR3e robotic arm to sort bottles by cap colour, and collaborated on training a YOLO‑based detector in simulation. These projects strengthened my teamwork and practical problem‑solving skills.</p>
-      <p class="mt-3 text-zinc-300 leading-relaxed">My journey includes learning through difficulty. Balancing study and work, I once failed a core subject, then re‑enrolled, applied better strategies, and achieved a distinction. This experience built resilience and time management.</p>
-      <p class="mt-3 text-zinc-300 leading-relaxed">Thank you for considering my application. I have attached my resume and welcome the chance to discuss how I can contribute to your team.</p>
-      <p class="mt-3 text-zinc-400">Kind regards,<br/>Luis Pratama</p>
-    </div>
-  </section>
-
-  <!-- Key Facts (from Landing Page + Resume) -->
+  <!-- Key Facts -->
   <section id="facts" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-xl md:text-2xl font-semibold text-white">Key Facts</h2>
     <ul class="mt-6 grid md:grid-cols-2 gap-4">
-      <li class="group rounded-2xl border border-white/10 p-4 text-zinc-300 bg-white/5 hover:bg-white/[0.08] transition"><span class="text-zinc-400">Degree</span><br/>Final‑year Mechatronics (Honours) at UTS (2022–2025)</li>
+      <li class="group rounded-2xl border border-white/10 p-4 text-zinc-300 bg-white/5 hover:bg-white/[0.08] transition"><span class="text-zinc-400">Degree</span><br/>Final-year Mechatronics (Honours) at UTS (2022–2025)</li>
       <li class="group rounded-2xl border border-white/10 p-4 text-zinc-300 bg-white/5 hover:bg-white/[0.08] transition"><span class="text-zinc-400">Focus</span><br/>Mechanical building design using SolidWorks</li>
       <li class="group rounded-2xl border border-white/10 p-4 text-zinc-300 bg-white/5 hover:bg-white/[0.08] transition"><span class="text-zinc-400">Internship</span><br/>Optik Consultancy / Byron Bay Technology (May–Aug 2024)</li>
-      <li class="group rounded-2xl border border-white/10 p-4 text-zinc-300 bg-white/5 hover:bg-white/[0.08] transition"><span class="text-zinc-400">Tooling</span><br/>Arduino · ROS 2 · OpenCV · YOLO (sim) · SolidWorks</li>
+      <li class="group rounded-2xl border border-white/10 p-4 text-zinc-300 bg-white/5 hover:bg-white/[0.08] transition"><span class="text-zinc-400">Tooling</span><br/>Arduino · ROS 2 · OpenCV · YOLO (sim) · SolidWorks</li>
     </ul>
   </section>
 
-  <!-- Projects (images in /assets • replace with your screenshots) -->
+  <!-- Projects -->
   <section id="projects" class="mx-auto max-w-6xl px-4 py-12">
     <div class="flex items-center justify-between">
       <h2 class="text-xl md:text-2xl font-semibold text-white">Selected Projects</h2>
@@ -132,49 +118,34 @@
       <article class="group rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent hover:from-white/10 transition">
         <div class="relative">
           <div class="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-accent-500/30 to-fuchsia-500/30 opacity-0 group-hover:opacity-100 blur transition"></div>
-          <img src="/assets/ur3e.jpg" alt="UR3e vision perception" class="relative rounded-xl w-full h-44 object-cover border border-white/10"/>
-        </div>
-        <h3 class="mt-4 text-white font-medium">UR3e Bottle Sorting — Vision Perception</h3>
-        <p class="mt-2 text-sm text-zinc-400">ROS 2 node capturing RealSense frames with a live OpenCV tuning UI; stable signals for accurate pick‑and‑place.</p>
-        <ul class="mt-4 text-sm text-zinc-300 space-y-1 list-disc list-inside">
-          <li>Real‑time threshold tuning GUI</li>
-          <li>Data handoff to motion &amp; gripper stack</li>
-          <li>Lighting‑robust operation</li>
-        </ul>
-      </article>
-      <article class="group rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent hover:from-white/10 transition">
-        <div class="relative">
-          <div class="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-fuchsia-500/30 to-accent-500/30 opacity-0 group-hover:opacity-100 blur transition"></div>
-          <img src="/assets/sortbot.jpg" alt="uArm SortBot simulation" class="relative rounded-xl w-full h-44 object-cover border border-white/10"/>
+          <img src="/assets/techfest.jpg" alt="UTS TechFest SortBot showcase" class="relative rounded-xl w-full h-44 object-cover border border-white/10"/>
         </div>
         <h3 class="mt-4 text-white font-medium">SortBot Simulation — uArm + YOLO</h3>
-        <p class="mt-2 text-sm text-zinc-400">Top‑down detector trained on 1k+ labeled images in PyBullet; achieved high in‑sim identification accuracy.</p>
+        <p class="mt-2 text-sm text-zinc-400">Top-down detector trained on 1k+ labeled images in PyBullet; achieved high in-sim identification accuracy. Showcased at UTS TechFest.</p>
         <ul class="mt-4 text-sm text-zinc-300 space-y-1 list-disc list-inside">
-          <li>Dataset &amp; labeling pipeline</li>
+          <li>Dataset & labeling pipeline</li>
           <li>Camera–robot mapping</li>
           <li>Scenario robustness testing</li>
         </ul>
       </article>
+
+      <article class="group rounded-2xl border border-white/10 p-6 bg-gradient-to-b from-white/5 to-transparent hover:from-white/10 transition">
+        <div class="relative">
+          <div class="absolute -inset-[1px] rounded-xl bg-gradient-to-r from-fuchsia-500/30 to-accent-500/30 opacity-0 group-hover:opacity-100 blur transition"></div>
+          <img src="/assets/expo.jpg" alt="Electronex Expo participation" class="relative rounded-xl w-full h-44 object-cover border border-white/10"/>
+        </div>
+        <h3 class="mt-4 text-white font-medium">UR3e Bottle Sorting — Vision Perception</h3>
+        <p class="mt-2 text-sm text-zinc-400">ROS 2 node capturing RealSense frames with a live OpenCV tuning UI; stable signals for accurate pick-and-place. Explored related tech at the Electronex Expo.</p>
+        <ul class="mt-4 text-sm text-zinc-300 space-y-1 list-disc list-inside">
+          <li>Real-time threshold tuning GUI</li>
+          <li>Data handoff to motion & gripper stack</li>
+          <li>Lighting-robust operation</li>
+        </ul>
+      </article>
     </div>
   </section>
 
-  <!-- Reflection -->
-  <section id="reflection" class="mx-auto max-w-6xl px-4 py-12">
-    <h2 class="text-xl md:text-2xl font-semibold text-white">Reflection</h2>
-    <div class="mt-6 grid gap-6">
-      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <h3 class="text-white font-medium">Sustainability in Engineering</h3>
-        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">While designing a nozzle housing with multidirectional motion and auto shut‑off, I initially focused on performance and reliability. Reflecting afterward, I recognised how automation can reduce manual work and change roles around a system. Responsible engineering means considering not only technical success but also the social impacts of our design choices.</p>
-        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">This experience reframed sustainability for me as both technical and human. I aim to evaluate outcomes on users and workflows, not just throughput, and to bring an ethical lens to future decisions.</p>
-      </div>
-      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
-        <h3 class="text-white font-medium">Global & Intercultural Practice</h3>
-        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">As an international student in Australia, I’ve seen how team dynamics are shaped by culture and comfort zones. Positive, inclusive teams improved our results and confidence. Going forward, I’ll take initiative to create respectful, supportive spaces so every member can contribute fully—skills that matter as much as technical tools in global engineering practice.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience (from Resume) -->
+  <!-- Experience -->
   <section id="experience" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-xl md:text-2xl font-semibold text-white">Experience</h2>
     <div class="mt-6 grid gap-6">
@@ -184,30 +155,77 @@
           <span class="text-xs text-zinc-400">May–Aug 2024</span>
         </div>
         <ul class="mt-3 text-sm text-zinc-300 space-y-1 list-disc list-inside">
-          <li>Designed multidirectional nozzle housing with auto shut‑off</li>
+          <li>Designed multidirectional nozzle housing with auto shut-off</li>
           <li>SolidWorks modeling to tight tolerances and precise fit</li>
-          <li>Integrated servos &amp; Arduino for automation</li>
-          <li>Prototyping, testing, and mech‑electrical integration</li>
+          <li>Integrated servos & Arduino for automation</li>
+          <li>Prototyping, testing, and mech-electrical integration</li>
         </ul>
       </div>
+
       <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
         <div class="flex items-baseline justify-between gap-4">
           <h3 class="text-white font-medium">Super Agent Agency — Hospitality Staff</h3>
           <span class="text-xs text-zinc-400">May 2022 – Present</span>
         </div>
-        <p class="mt-3 text-sm text-zinc-300">Front‑of‑house support at high‑profile events; teamwork, service coordination, and adaptability in fast‑paced settings.</p>
+        <p class="mt-3 text-sm text-zinc-300">Front-of-house support at high-profile events; teamwork, service coordination, and adaptability in fast-paced settings.</p>
       </div>
+
       <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
         <div class="flex items-baseline justify-between gap-4">
           <h3 class="text-white font-medium">MilkMe Barista — Barista</h3>
           <span class="text-xs text-zinc-400">May 2023 – Present</span>
         </div>
-        <p class="mt-3 text-sm text-zinc-300">Prepare espresso beverages in mobile café environments; consistency, hygiene, and peak‑hour customer service.</p>
+        <p class="mt-3 text-sm text-zinc-300">Prepare espresso beverages in mobile café environments; consistency, hygiene, and peak-hour customer service.</p>
       </div>
     </div>
   </section>
 
-  <!-- Resume (download + quick summary) -->
+  <!-- Contributions (your photos) -->
+  <section id="contributions" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-xl md:text-2xl font-semibold text-white">Contributions & Events</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border border-white/10 p-4 bg-white/5">
+        <img src="/assets/expo.jpg" alt="Electronex Expo participation" class="rounded-xl object-cover w-full h-64" />
+        <p class="mt-3 text-sm text-zinc-300">Joined the Electronex Expo with peers to explore the latest electronics design & assembly technologies.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-4 bg-white/5">
+        <img src="/assets/techfest.jpg" alt="UTS TechFest SortBot showcase" class="rounded-xl object-cover w-full h-64" />
+        <p class="mt-3 text-sm text-zinc-300">Showcased the SortBot simulation project at UTS TechFest, demonstrating YOLO-based object detection.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cover Letter -->
+  <section id="cover-letter" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-xl md:text-2xl font-semibold text-white">Cover Letter</h2>
+    <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-white/5">
+      <p class="text-zinc-300 leading-relaxed">Dear Hiring Manager,</p>
+      <p class="mt-3 text-zinc-300 leading-relaxed">I am writing to express my interest in the Graduate Mechatronics Engineer position. As a final-year Mechatronics Engineering student at the University of Technology Sydney, I am excited about contributing to innovative engineering projects and developing professionally through a graduate program.</p>
+      <p class="mt-3 text-zinc-300 leading-relaxed">During my internship at Optik Consultancy, I worked on a microalgae bioreactor project and learned to adjust goals under time constraints while keeping quality standards. I also communicated technical decisions to non-engineering stakeholders, led the transition from Arduino to ESP32 for wireless stability, and proposed a flexible waterproofing approach with silicone grommets.</p>
+      <p class="mt-3 text-zinc-300 leading-relaxed">At university, I developed a vision system for a UR3e robotic arm to sort bottles by cap colour, and collaborated on training a YOLO-based detector in simulation. These projects strengthened my teamwork and practical problem-solving skills.</p>
+      <p class="mt-3 text-zinc-300 leading-relaxed">My journey includes learning through difficulty. Balancing study and work, I once failed a core subject, then re-enrolled, applied better strategies, and achieved a distinction. This experience built resilience and time management.</p>
+      <p class="mt-3 text-zinc-300 leading-relaxed">Thank you for considering my application. I have attached my resume and welcome the chance to discuss how I can contribute to your team.</p>
+      <p class="mt-3 text-zinc-400">Kind regards,<br/>Luis Pratama</p>
+    </div>
+  </section>
+
+  <!-- Reflection -->
+  <section id="reflection" class="mx-auto max-w-6xl px-4 py-12">
+    <h2 class="text-xl md:text-2xl font-semibold text-white">Reflection</h2>
+    <div class="mt-6 grid gap-6">
+      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+        <h3 class="text-white font-medium">Sustainability in Engineering</h3>
+        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">While designing a nozzle housing with multidirectional motion and auto shut-off, I initially focused on performance and reliability. Reflecting afterward, I recognised how automation can reduce manual work and change roles around a system. Responsible engineering means considering not only technical success but also the social impacts of our design choices.</p>
+        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">This experience reframed sustainability for me as both technical and human. I aim to evaluate outcomes on users and workflows, not just throughput, and to bring an ethical lens to future decisions.</p>
+      </div>
+      <div class="rounded-2xl border border-white/10 p-6 bg-white/5">
+        <h3 class="text-white font-medium">Global & Intercultural Practice</h3>
+        <p class="mt-2 text-sm text-zinc-300 leading-relaxed">As an international student in Australia, I’ve seen how team dynamics are shaped by culture and comfort zones. Positive, inclusive teams improved our results and confidence. Going forward, I’ll take initiative to create respectful, supportive spaces so every member can contribute fully—skills that matter as much as technical tools in global engineering practice.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
   <section id="resume" class="mx-auto max-w-6xl px-4 py-12">
     <h2 class="text-xl md:text-2xl font-semibold text-white">Resume</h2>
     <div class="mt-6 rounded-2xl border border-white/10 p-6 bg-white/5">
@@ -218,7 +236,7 @@
       </div>
       <ul class="mt-6 grid md:grid-cols-2 gap-4 text-sm text-zinc-300">
         <li class="rounded-xl border border-white/10 p-4 bg-white/5"><span class="text-zinc-400">Education</span><br/>B. Eng (Hons) Mechatronics — UTS (Feb 2022 – Dec 2025 expected)</li>
-        <li class="rounded-xl border border-white/10 p-4 bg-white/5"><span class="text-zinc-400">Technical</span><br/>SolidWorks · ROS 2 · OpenCV · YOLO (sim) · Arduino · C/C++ · Python · MATLAB</li>
+        <li class="rounded-xl border border-white/10 p-4 bg-white/5"><span class="text-zinc-400">Technical</span><br/>SolidWorks · ROS 2 · OpenCV · YOLO (sim) · Arduino · C/C++ · Python · MATLAB</li>
         <li class="rounded-xl border border-white/10 p-4 bg-white/5"><span class="text-zinc-400">Projects</span><br/>UR3e Vision Perception · SortBot Simulation</li>
         <li class="rounded-xl border border-white/10 p-4 bg-white/5"><span class="text-zinc-400">Certifications</span><br/>RSA · Class C Driver’s Licence</li>
       </ul>
@@ -242,7 +260,6 @@
         <div class="text-white">Sydney, NSW</div>
       </div>
     </div>
-    <div class="mt-6 text-xs text-zinc-500">/* Upload your PDF as <code>resume.pdf</code> in the same folder to activate the CV button in the header. */</div>
   </section>
 
   <footer class="mx-auto max-w-6xl px-4 py-10 text-xs text-zinc-500">
